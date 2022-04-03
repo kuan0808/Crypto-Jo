@@ -1,16 +1,13 @@
 import clsx from "clsx";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
-const NavLink = ({ Icon, text, pathname }) => {
-  const router = useRouter();
-  const active = pathname === router.pathname;
+const NavLink = ({ Icon, text, active }) => {
   return (
-    <Link href={pathname}>
+    <Link href="/">
       <div
         className={clsx(
-          "w-12 h-12 p-1.5 flex flex-col items-center justify-center text-white/80",
-          active && "rounded-full border text-jo-400 bg-white/80"
+          "w-12 h-12 p-1.5 flex flex-col items-center justify-center text-jo-800",
+          active && "rounded-full border border-jo-800"
         )}
       >
         <Icon />
